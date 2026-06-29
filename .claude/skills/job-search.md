@@ -30,13 +30,36 @@ Run all of these and compile results:
 10. **Frontend Developer** — location: "remote" — search: "frontend developer"
 11. **Hotel Manager** — location: "Kingston, ON" — search: "hotel food beverage manager"
 
-### Web Search
+### Web Search — Other Job Boards
 
-Also run web searches for recent postings:
-- "restaurant general manager Kingston Ontario hiring"
-- "general manager hospitality eastern Ontario job posting"
-- "Jack Astors Delta Hotels Kingston hiring"
-- "web developer remote Canada hiring"
+Run web searches targeting boards that Indeed doesn't cover. Use site-specific queries where possible:
+
+**Job Bank (Government of Canada):**
+- site:jobbank.gc.ca restaurant general manager Kingston Ontario
+- site:jobbank.gc.ca general manager hospitality eastern Ontario
+
+**LinkedIn:**
+- site:linkedin.com/jobs "restaurant general manager" Kingston OR Ottawa OR "eastern Ontario"
+- site:linkedin.com/jobs "general manager" hotel Kingston Ontario
+
+**Workopolis:**
+- site:workopolis.com restaurant manager Kingston OR Ottawa OR "New Brunswick"
+
+**Hcareers (hospitality-specific):**
+- site:hcareers.com general manager Ontario
+- site:hcareers.com food beverage manager Kingston OR Ottawa
+
+**Facebook Jobs:**
+- facebook.com jobs restaurant general manager Kingston Ontario
+- facebook.com jobs general manager hospitality eastern Ontario
+
+**Kijiji (strong for local/Eastern Ontario):**
+- site:kijiji.ca restaurant manager Kingston
+- site:kijiji.ca general manager Kingston OR Belleville OR Napanee
+
+**General catch-all:**
+- "restaurant general manager" Kingston Ontario hiring -indeed.com
+- "Jack Astors" OR "Delta Hotels" Kingston hiring
 
 ## Filtering & Ranking
 
