@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ramsbottom Web Development — Custom Websites & Apps for Canadian Small Business</title>
-<meta name="description" content="Custom website design and web app development for Canadian small businesses. Modern, mobile-responsive builds delivered in 4 days. From $1,500 CAD flat — no monthly subscriptions, no platform lock-in.">
+<title>Ramsbottom Web Development — Take Your Small Business to the Next Level</title>
+<meta name="description" content="Custom websites, apps, and in-house tools for Canadian small businesses. Get found, build trust, and turn visitors into loyal customers. Start for just $100 — see your idea before you commit. Full builds often $1,500 CAD or less.">
 
 <link rel="canonical" href="https://ramsdev.online/">
 
 <!-- Open Graph for Facebook sharing -->
-<meta property="og:title" content="Ramsbottom Web Development — Custom Websites & Apps for Canadian Small Business">
-<meta property="og:description" content="Custom website design and web app development for Canadian small businesses. Delivered in 4 days from $1,500 CAD.">
+<meta property="og:title" content="Take Your Small Business to the Next Level — Ramsbottom Web Development">
+<meta property="og:description" content="Custom websites, apps, and in-house tools for Canadian small businesses. Get started for just $100 — see your idea before you commit. Full builds often $1,500 CAD or less.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramsdev.online/">
 <!-- <meta property="og:image" content="https://ramsdev.online/hero.png"> -->
@@ -23,8 +23,8 @@
   "name": "Ramsbottom Web Development",
   "url": "https://ramsdev.online",
   "image": "https://ramsdev.online/hero.png",
-  "description": "Custom website design and web app development for Canadian small businesses. Modern, mobile-responsive sites and apps delivered in 4 days, from $1,500 CAD.",
-  "priceRange": "CAD$1500",
+  "description": "Custom websites, web apps, and in-house business tools for Canadian small businesses. Get found, build trust, and turn visitors into loyal customers. Start for $100 and see your idea before committing — full builds often $1,500 CAD or less.",
+  "priceRange": "$100–$1500 CAD",
   "areaServed": {
     "@type": "Country",
     "name": "Canada"
@@ -51,14 +51,14 @@
 
 <style>
   :root {
-    --paper: #1a2620;
-    --paper-deep: #243029;
-    --ink: #ebe4d6;
-    --ink-soft: #8a958c;
-    --rust: #e8744a;
+    --paper: #1e2b24;
+    --paper-deep: #2a3730;
+    --ink: #ece6d9;
+    --ink-soft: #97a199;
+    --rust: #ec7d54;
     --rust-deep: #c4583a;
-    --rule: rgba(235, 228, 214, 0.12);
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+    --rule: rgba(236, 230, 217, 0.1);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.18), 0 12px 32px rgba(0, 0, 0, 0.18);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -187,7 +187,7 @@
   }
 
   .hero-image {
-    border-radius: 8px;
+    border-radius: 14px;
     overflow: hidden;
     box-shadow: var(--shadow);
     background: var(--paper-deep);
@@ -271,6 +271,39 @@
     animation: fadeUp 0.8s 0.7s forwards;
   }
 
+  .hero-bullets {
+    list-style: none;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.6s forwards;
+  }
+
+  .hero-bullets li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 15px;
+    color: var(--ink);
+    line-height: 1.5;
+    max-width: 46ch;
+  }
+
+  .hero-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background: var(--rust);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center / 12px no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center / 12px no-repeat;
+    background-color: var(--rust);
+  }
+
   .hero-cta-row {
     display: flex;
     gap: 16px;
@@ -331,12 +364,12 @@
     background: var(--paper-deep);
     border: 1px solid var(--rule);
     padding: 18px 22px;
-    border-radius: 6px;
+    border-radius: 12px;
     align-self: flex-start;
     box-shadow: var(--shadow);
     opacity: 0;
     animation: fadeIn 0.8s 0.5s forwards;
-    max-width: 280px;
+    max-width: 340px;
   }
 
   .price-card-label {
@@ -414,7 +447,7 @@
   .work-card {
     background: var(--paper-deep);
     border: 1px solid var(--rule);
-    border-radius: 6px;
+    border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
@@ -595,7 +628,7 @@
   }
 
   .usecase-image {
-    border-radius: 8px;
+    border-radius: 14px;
     overflow: hidden;
     aspect-ratio: 496 / 634;
     margin-bottom: 24px;
@@ -1038,9 +1071,26 @@
       <div class="hero-copy">
         <div class="hero-eyebrow">Web development · Canada</div>
 
+        <h1>
+          <span>Take your business</span>
+          <span class="accent">to the next level.</span>
+        </h1>
+
+        <p class="hero-sub">
+          Get found, build trust, and turn first-time visitors into loyal
+          customers — with a custom website, app, or tool built just for your
+          business.
+        </p>
+
+        <ul class="hero-bullets">
+          <li>Websites that get your business found</li>
+          <li>Web apps &amp; games</li>
+          <li>In-house tools — like linking a sales terminal to your inventory software or Excel</li>
+        </ul>
+
         <div class="hero-cta-row">
           <a href="#contact" class="btn btn-primary">
-            Start my idea
+            Get started for $100
             <span class="arrow">→</span>
           </a>
           <a href="#work" class="btn btn-secondary">
@@ -1048,10 +1098,10 @@
           </a>
         </div>
 
-        <div class="price-card" aria-hidden="true">
-          <div class="price-card-label">Your idea to reality from:</div>
-          <div class="price-card-amount"><em>$1,500</em> CAD</div>
-          <div class="price-card-note">4-day turnaround. Revisions included.</div>
+        <div class="price-card">
+          <div class="price-card-label">Start here — no big commitment</div>
+          <div class="price-card-amount"><em>$100</em> to begin</div>
+          <div class="price-card-note">See your idea come to life first. It goes toward your full build — often $1,500 CAD or less.</div>
         </div>
       </div>
     </div>
@@ -1074,11 +1124,7 @@
       <!-- ───── 1. Bingo Card Generator ───── -->
       <a href="https://bingocardgenerator.online" class="work-card reveal" target="_blank" rel="noopener">
         <div class="work-thumb">
-          <!--
-            OPTIONAL: Drop a static screenshot here as a thumbnail behind the play button.
-            Save bingo-thumb.png next to index.html and uncomment:
-          -->
-          <!-- <img src="bingo-thumb.png" alt="Bingo Card Generator screenshot" loading="lazy"> -->
+          <img src="bingo-thumb.png" alt="BingoCardGenerator.Online — music bingo and trivia card generator" loading="lazy">
           <button class="demo-trigger" data-video="drive:16e4xnZ2WupfG8bsIEeMJOfdYLKBrEHBB" aria-label="Watch Bingo Card Generator demo">
             <span class="demo-trigger-icon">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -1124,14 +1170,8 @@
       <!-- ───── 3. Wordstrike ───── -->
       <a href="https://tooniebuckerooni.github.io/wordstrike/" class="work-card reveal" target="_blank" rel="noopener">
         <div class="work-thumb">
-          <!--
-            GIF PLACEHOLDER:
-            Save your animated demo as wordstrike-demo.gif next to index.html.
-            The img below will display it. If you want a static fallback first, swap to a .jpg.
-          -->
-          <img src="wordstrike-demo.gif" alt="Wordstrike multiplayer word game gameplay loop" loading="lazy"
-               onerror="this.style.display='none'">
-          <button class="demo-trigger" data-video="link" aria-label="Open Wordstrike">
+          <img src="wordstrike-thumb.png" alt="WordJab multiplayer word game home screen" loading="lazy">
+          <button class="demo-trigger" data-video="link" aria-label="Open WordJab">
             <span class="demo-trigger-label">Play it →</span>
           </button>
         </div>
@@ -1141,7 +1181,7 @@
             <span class="work-tag">Multiplayer</span>
             <span class="work-tag">Game</span>
           </div>
-          <h3>Wordstrike</h3>
+          <h3>WordJab</h3>
           <p>A real-time multiplayer word game playable across devices using peer-to-peer connections — no server, no signup, just a 4-letter code. Built as a self-contained single-file web app.</p>
           <span class="work-link">Visit live site →</span>
         </div>
@@ -1194,27 +1234,27 @@
     <div class="section-header reveal">
       <div>
         <div class="section-eyebrow">How it works</div>
-        <h2>Simple, <em>start to finish.</em></h2>
+        <h2>See it first, <em>then commit.</em></h2>
       </div>
-      <p>$1,500 CAD flat · 4-day turnaround · Revisions included · No subscriptions, no platform lock-in.</p>
+      <p>Start for just $100 · See your idea before you commit · Full build often $1,500 CAD or less · 4-day turnaround · No subscriptions, no platform lock-in.</p>
     </div>
 
     <div class="process-grid">
       <div class="process-step reveal">
         <h3>Tell me about it</h3>
-        <p>A quick call or message about your business, your audience, and what your site or app needs to do.</p>
+        <p>A quick, no-pressure call or message about your business, your audience, and what you'd love your site, app, or tool to do.</p>
       </div>
       <div class="process-step reveal">
-        <h3>I send a draft</h3>
-        <p>Within 48 hours. Modern, mobile-responsive, custom-coded — no templates, no bloat.</p>
+        <h3>See it first — $100</h3>
+        <p>I turn your idea into a real, working preview so you can actually see it before you commit. Non-refundable, but it goes toward your build.</p>
       </div>
       <div class="process-step reveal">
-        <h3>You give feedback</h3>
-        <p>One full revision round included. Refine the design, copy, and structure until it's right.</p>
+        <h3>We make it yours</h3>
+        <p>Love it? We build it out and refine the design, copy, and structure together until it's exactly right.</p>
       </div>
       <div class="process-step reveal">
         <h3>It goes live</h3>
-        <p>Day four. Site deployed, ready for visitors. You own the code — I'll show you how to update content yourself.</p>
+        <p>Site deployed, ready for visitors — often in about four days. You own the code, and I'll show you how to update it yourself.</p>
       </div>
     </div>
   </div>
