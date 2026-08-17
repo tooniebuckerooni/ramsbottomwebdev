@@ -1,102 +1,70 @@
-# Job Opportunity Search
+# Job Search — Dusty Ramsbottom
 
-Search for job opportunities matching Dusty Ramsbottom's profile and send a push notification with the best finds.
-
-## Profile Summary
-
-- **Location:** East of Toronto, Canada. Top priority: Kingston and surrounding area (Napanee, Belleville, Brockville). Ottawa is acceptable but apply a 15% ranking penalty — French language requirements are a barrier. New Brunswick is fine but tends rural. Remote is acceptable but flag clearly — in-person/hybrid roles are preferred and more trusted.
-- **Minimum Salary:** CAD $60,000/year
-- **Priority Role:** Restaurant General Manager (search this first and weight it highest)
-- **All Target Roles:** Restaurant General Manager, General Manager, Event Manager, Digital Marketer, Marketing Manager, Marketing Coordinator, Assistant Manager, Web Developer, Frontend Developer
-- **Background:** 10+ years restaurant/bar management, founder of entertainment company, web developer, digital marketer
-- **Key Skills:** Leadership, team management, restaurant operations, event marketing, JavaScript, HTML/CSS, Node.js, full-stack web development, digital marketing, Google Ads, Google Analytics, social media management, e-commerce, content creation, Adobe Creative Suite, Canva
-- **Known Good Companies:** Jack Astor's, Delta Hotels by Marriott, SIRCorp brands (Scaddabush, Reds, Loose Moose, etc.) — flag these if they appear
+## Profile
+- **Name:** Dusty Ramsbottom
+- **Email:** dustinramsbottom@gmail.com
+- **Target move date:** September 2026
+- **Location:** Kingston, ON (moving from current location)
+- **Vehicle:** None (transit only — Kingston Transit accessible positions only)
+- **Priority role:** Restaurant General Manager
+- **Adjacent roles:** GM hospitality, Hotel F&B Manager, Event Manager, Store Manager (retail), Marketing Manager, Web Developer
 
 ## Search Strategy
 
-### Indeed Searches (country_code: "CA" for all)
+### Indeed API Queries (Kingston, ON, CA, fulltime)
+1. restaurant general manager
+2. general manager hospitality
+3. store manager retail
+4. food service manager
+5. hotel operations manager
+6. bar manager pub manager
+7. operations manager
+8. assistant manager restaurant
+9. event coordinator manager
+10. marketing manager
+11. Farm Boy
 
-Run all of these and compile results:
+### Web Search Boards
+- **Job Bank:** site:jobbank.gc.ca restaurant manager Kingston ON
+- **LinkedIn:** site:linkedin.com/jobs general manager Kingston ON
+- **Workopolis:** site:workopolis.com manager Kingston ON
+- **Hcareers:** site:hcareers.com Kingston ON manager
+- **Facebook/Kijiji:** Kingston ON manager jobs
+- **ZipRecruiter:** Kingston Ontario management jobs
 
-1. **Restaurant General Manager** — location: "Kingston, ON" — search: "restaurant general manager"
-2. **General Manager** — location: "Kingston, ON" — search: "general manager restaurant"
-3. **Restaurant General Manager** — location: "Ottawa, ON" — search: "restaurant general manager"
-4. **General Manager** — location: "Belleville, ON" — search: "general manager"
-5. **Event Manager** — location: "Ontario" — search: "event manager"
-6. **Digital Marketing Manager** — location: "Ontario" — search: "digital marketing manager"
-7. **Marketing Coordinator** — location: "Kingston, ON" — search: "marketing coordinator"
-8. **Web Developer** — location: "remote" — search: "web developer javascript"
-9. **General Manager** — location: "New Brunswick" — search: "general manager restaurant"
-10. **Frontend Developer** — location: "remote" — search: "frontend developer"
-11. **Hotel Manager** — location: "Kingston, ON" — search: "hotel food beverage manager"
+## Location Scoring
+- **Kingston / Napanee / Belleville / Brockville:** Full value (must be transit accessible)
+- **Ottawa:** -15% penalty (French barrier) — flag with [OTTAWA — French may apply]
+- **New Brunswick:** Slight penalty
+- **Remote:** Flag with [REMOTE]
+- **West of Toronto:** Exclude entirely
 
-### Web Search — Other Job Boards
+## Role Scoring
+1. Restaurant General Manager — TOP priority
+2. GM Hospitality / Hotel — High
+3. Hotel F&B Manager — High
+4. Event Manager — Medium-high
+5. Marketing Manager — Medium
+6. Web Developer — Medium
+7. Store Manager (retail) — Medium
+8. Assistant Manager (any) — Medium (stepping stone)
 
-Run web searches targeting boards that Indeed doesn't cover. Use site-specific queries where possible:
-
-**Job Bank (Government of Canada):**
-- site:jobbank.gc.ca restaurant general manager Kingston Ontario
-- site:jobbank.gc.ca general manager hospitality eastern Ontario
-
-**LinkedIn:**
-- site:linkedin.com/jobs "restaurant general manager" Kingston OR Ottawa OR "eastern Ontario"
-- site:linkedin.com/jobs "general manager" hotel Kingston Ontario
-
-**Workopolis:**
-- site:workopolis.com restaurant manager Kingston OR Ottawa OR "New Brunswick"
-
-**Hcareers (hospitality-specific):**
-- site:hcareers.com general manager Ontario
-- site:hcareers.com food beverage manager Kingston OR Ottawa
-
-**Facebook Jobs:**
-- facebook.com jobs restaurant general manager Kingston Ontario
-- facebook.com jobs general manager hospitality eastern Ontario
-
-**Kijiji (strong for local/Eastern Ontario):**
-- site:kijiji.ca restaurant manager Kingston
-- site:kijiji.ca general manager Kingston OR Belleville OR Napanee
-
-**General catch-all:**
-- "restaurant general manager" Kingston Ontario hiring -indeed.com
-- "Jack Astors" OR "Delta Hotels" Kingston hiring
-
-## Filtering & Ranking
-
-From results, select the **top 5-8 most relevant** opportunities using this ranking:
-
-### Location scoring
-- Kingston / Napanee / Belleville / Brockville / Eastern Ontario (not Ottawa): **full value**
-- Ottawa area: **apply 15% penalty** (French requirements may be a barrier)
-- New Brunswick: **slight penalty** (rural, lower salaries)
-- Remote: **flag with [REMOTE]** — acceptable but user is skeptical of remote roles
-- West of Toronto or far-flung: **exclude**
-
-### Role scoring
-- Restaurant General Manager: **top priority, always include**
-- General Manager (hospitality/entertainment): **high priority**
-- Hotel F&B Manager: **high priority**
-- Event Manager: **medium-high**
-- Marketing Manager / Coordinator: **medium**
-- Web Developer / Frontend Dev: **medium**
-
-### Other filters
-- Salary meets or exceeds CAD $60,000/year (if listed)
-- Avoid roles requiring French fluency as a hard requirement
-- Avoid roles requiring unrelated skills (Java, C++, data science, heavy enterprise tech)
-- Prefer smaller companies, independent restaurants, and known-good brands (SIRCorp, Marriott/Delta)
+## Known-Good Companies
+- **Jack Astor's** (SIRCorp) — user preference
+- **Delta Hotels by Marriott** — user preference
+- **Diamond Hotels Management** — operates Delta Waterfront, Holiday Inn Express, Quality Inn Kingston (3 properties = internal mobility)
+- **SIRCorp brands:** Jack Astor's, Scaddabush, Reds, Loose Moose
+- **Farm Boy** — user preference
 
 ## Output Format
+- Organize by concentric circles from downtown Kingston outward
+- ~20 results per report
+- Include: job title, company, pay (if available), source, apply link
+- Flag known-good companies
+- Flag roles requiring vehicle (exclude from main list)
+- Flag Ottawa roles with French warning
+- Include strategic notes section
 
-Send a **PushNotification** with a brief summary like:
-"Found X job matches! Top: [role] at [company] in [location]. Check session for details."
-
-Then output the full list with:
-- Job title (with apply link if available)
-- Company name
-- Location (tag [REMOTE] if remote, [OTTAWA - French may apply] for Ottawa roles)
-- Salary (if listed)
-- Why it's a good match (1 sentence)
-
-If no good matches found, send notification:
-"No strong job matches this round. Will check again later."
+## Application Tracking
+- No applications submitted as of August 17, 2026
+- When user starts applying, add follow-up tracking to reports
